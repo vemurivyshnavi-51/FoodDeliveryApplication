@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foodie Express</title>
+
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+}
+
+body {
+	background: #f8f8f8;
+}
+
+/* Navbar */
+.navbar {
+	background: #ff5a5f;
+	color: white;
+	padding: 15px 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.nav-links {
+	list-style: none;
+	display: flex;
+	gap: 25px;
+}
+
+.nav-links a {
+	color: white;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.nav-links a:hover {
+	text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+	background:
+		url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600')
+		center/cover;
+	height: 450px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero-content {
+	text-align: center;
+	color: white;
+	background: rgba(0, 0, 0, 0.5);
+	padding: 30px;
+	border-radius: 10px;
+}
+
+.hero-content h1 {
+	font-size: 45px;
+	margin-bottom: 15px;
+}
+
+.hero-content p {
+	margin-bottom: 20px;
+	font-size: 18px;
+}
+
+.search-box {
+	display: flex;
+	justify-content: center;
+}
+
+.search-box input {
+	width: 400px;
+	padding: 12px;
+	border: none;
+	border-radius: 5px 0 0 5px;
+}
+
+.search-box button {
+	padding: 12px 20px;
+	border: none;
+	background: #ff5a5f;
+	color: white;
+	cursor: pointer;
+	border-radius: 0 5px 5px 0;
+}
+
+/* Categories */
+.categories {
+	padding: 40px;
+}
+
+.categories h2 {
+	margin-bottom: 20px;
+}
+
+.category-container {
+	display: flex;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+
+.category {
+	background: white;
+	padding: 20px;
+	width: 150px;
+	text-align: center;
+	border-radius: 10px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+}
+
+.category:hover {
+	transform: scale(1.05);
+}
+
+/* Restaurant Section */
+.restaurants {
+	padding: 40px;
+}
+
+.restaurants h2 {
+	margin-bottom: 25px;
+}
+
+.restaurant-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 25px;
+}
+
+.card {
+	background: white;
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	transition: 0.3s;
+}
+
+.card:hover {
+	transform: translateY(-5px);
+}
+
+.card img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+
+.card-content {
+	padding: 15px;
+}
+
+.card-content h3 {
+	margin-bottom: 8px;
+}
+
+.rating {
+	color: green;
+	font-weight: bold;
+}
+
+.offer {
+	color: red;
+	font-weight: bold;
+	margin-top: 8px;
+}
+
+/* Footer */
+.footer {
+	background: #222;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	margin-top: 40px;
+}
+</style>
+
+</head>
+<body>
+
+	<!-- Navbar -->
+	<nav class="navbar">
+		<div class="logo">🍔 Foodie Express</div>
+
+		<ul class="nav-links">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Restaurants</a></li>
+			<li><a href="#">Offers</a></li>
+			<li><a href="#">Cart</a></li>
+			<li><a href="#">Login</a></li>
+		</ul>
+	</nav>
+
+	<!-- Hero Section -->
+	<section class="hero">
+		<div class="hero-content">
+			<h1>Order Food Anytime, Anywhere</h1>
+			<p>Discover the best restaurants near you</p>
+
+			<div class="search-box">
+				<input type="text" placeholder="Search for restaurants or dishes">
+				<button>Search</button>
+			</div>
+		</div>
+	</section>
+
+	<!-- Categories -->
+	<section class="categories">
+		<h2>Popular Categories</h2>
+
+		<div class="category-container">
+			<div class="category">🍕 Pizza</div>
+			<div class="category">🍔 Burgers</div>
+			<div class="category">🍜 Noodles</div>
+			<div class="category">🥗 Healthy</div>
+			<div class="category">🍰 Desserts</div>
+			<div class="category">☕ Coffee</div>
+		</div>
+	</section>
+
+	<!-- Restaurants -->
+	<section class="restaurants">
+		<h2>Top Restaurants</h2>
+
+		<div class="restaurant-grid">
+
+			<div class="card">
+				<img
+					src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800">
+				<div class="card-content">
+					<h3>Pizza Paradise</h3>
+					<p>Italian, Pizza, Fast Food</p>
+					<p class="rating">⭐ 4.5 | 25 mins</p>
+					<p class="offer">50% OFF up to ₹100</p>
+				</div>
+			</div>
+
+			<div class="card">
+				<img
+					src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800">
+				<div class="card-content">
+					<h3>Burger House</h3>
+					<p>Burgers, Fries, Beverages</p>
+					<p class="rating">⭐ 4.3 | 20 mins</p>
+					<p class="offer">Buy 1 Get 1 Free</p>
+				</div>
+			</div>
+
+			<div class="card">
+				<img
+					src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=800">
+				<div class="card-content">
+					<h3>Spice Kitchen</h3>
+					<p>Indian, Biryani, Curry</p>
+					<p class="rating">⭐ 4.7 | 30 mins</p>
+					<p class="offer">Flat ₹125 OFF</p>
+				</div>
+			</div>
+
+			<div class="card">
+				<img
+					src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800">
+				<div class="card-content">
+					<h3>Chinese Wok</h3>
+					<p>Noodles, Fried Rice</p>
+					<p class="rating">⭐ 4.4 | 22 mins</p>
+					<p class="offer">30% OFF</p>
+				</div>
+			</div>
+
+			<div class="card">
+				<img
+					src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800">
+				<div class="card-content">
+					<h3>Cake Factory</h3>
+					<p>Cakes, Desserts, Bakery</p>
+					<p class="rating">⭐ 4.8 | 18 mins</p>
+					<p class="offer">Free Delivery</p>
+				</div>
+			</div>
+
+			<div class="card">
+				<img
+					src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800">
+				<div class="card-content">
+					<h3>Coffee Corner</h3>
+					<p>Coffee, Snacks</p>
+					<p class="rating">⭐ 4.6 | 15 mins</p>
+					<p class="offer">20% OFF</p>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="footer">
+		<p>© 2026 Foodie Express | Fast Delivery | Fresh Food</p>
+	</footer>
+
+
+</body>
+</html>
